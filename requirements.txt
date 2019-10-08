@@ -1,0 +1,5 @@
+tensorflow-gpu==2.0
+pep8
+pylint
+mypy
+tf_keras_contrib
