@@ -6,16 +6,6 @@ import subprocess
 with open('requirements.txt') as f:
     requirements = f.read().splitlines()
 
-
-class BuildKerasContribCommand(distutils.cmd.Command):
-    """Custom build command."""
-
-    def run(self):
-        self.run_command('pylint')
-        setuptools.command.build_py.build_py.run(self)
-
-
-
 setup(
     name='nets',
     version='0.1',

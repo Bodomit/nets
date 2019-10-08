@@ -1,5 +1,5 @@
-tensorflow-gpu==2.0
+tensorflow-gpu>=2.0
+tensorflow-addons
 pep8
 pylint
 mypy
-tf_keras_contrib

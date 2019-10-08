@@ -1,6 +1,6 @@
 import os
 import tensorflow as tf
-import keras_contrib as kc
+import tensorflow_addons as tfa
 
 
 class DownsampleLayer(tf.keras.layers.Layer):
@@ -12,7 +12,7 @@ class DownsampleLayer(tf.keras.layers.Layer):
             kernel_size,
             strides=2,
             padding="same")
-        self.normalisation = kc.layers.InstanceNormalization(
+        self.normalisation = tfa.layers.InstanceNormalization(
             axis=-1,
             center=False,
             scale=False)
@@ -33,7 +33,7 @@ class UpsampleLayer(tf.keras.layers.Layer):
             kernel_size,
             strides=1,
             padding="same")
-        self.normalisation = kc.layers.InstanceNormalization(
+        self.normalisation = tfa.layers.InstanceNormalization(
             axis=-1,
             center=False,
             scale=False)
